@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="TToT-Logo.png" alt="Tower of Taste Logo" width="200"/>
+  <img src="Assets/GFX/Logo/TToT-Logo.png" alt="Tower of Taste Logo" width="200"/>
 </p>
 
 # 🧀 **The Tower of Taste: Culinary Combat** 🍳  
