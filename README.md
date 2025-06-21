@@ -49,7 +49,7 @@ You hold the Book of Bleu... and vow to destroy all cheese demons.
 ## 🕹️ Gameplay Features
 
 - 🧑‍🍳 **Roguelike Loop**: Each run gives new ingredients, powers, and lore pieces.
-- 🔪 **Culinary Combat**: Fight with enchanted knives, boiling broths, and sentient spices.
+- 🔪 **Culinary Combat**: Fight with enchanted produce, weaponized entrées, and enhance your meals with magical spices.
 - 🧀 **Cheese Demon Lore**: Uncover the secret history of cheese-based infernal pacts.
 - 🔄 **Time-loop Narrative**: Each defeat is canon. Each success brings more questions.
 - 📖 **Tome Unlocks**: Discover pages of the Book of Bleu to unlock powers & story branches.
