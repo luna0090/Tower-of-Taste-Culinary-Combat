@@ -29,6 +29,15 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 move = new Vector3(moveInput.x, 0, moveInput.y);
-        rb.MovePosition(rb.position + move.normalized * moveSpeed * Time.fixedDeltaTime);
+
+        if (move.sqrMagnitude > 0.001f)
+        {
+            // Move the character
+            rb.MovePosition(rb.position + move.normalized * moveSpeed * Time.fixedDeltaTime);
+
+            // Rotate toward movement direction
+            Quaternion targetRotation = Quaternion.LookRotation(move);
+            rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, 0.15f));
+        }
     }
 }
