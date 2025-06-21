@@ -13,8 +13,22 @@ MonoBehaviour:
   m_Name: PixelateRenderFeature
   m_EditorClassIdentifier: 
   m_Active: 1
-  pixelWidth: 480
-  pixelHeight: 270
+  pixelWidth: 800
+  pixelHeight: 450
+--- !u!114 &-3346735184157078455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81492b7fd66939d4ab2632c287c0ff5c, type: 3}
+  m_Name: OutlineRenderFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings: {outlineMaterial: {fileID: 2100000, guid: 6cb91a2a9ac5215499525f32ef0ae2f1, type: 2}, renderPassEvent: 500}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

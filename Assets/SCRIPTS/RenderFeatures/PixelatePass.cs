@@ -58,4 +58,13 @@ public class PixelatePass : ScriptableRenderPass
     {
         // Optional cleanup
     }
+
+    public void Dispose()
+    {
+        if (tempRT != null)
+        {
+            tempRT.Release();
+            tempRT = null;
+        }
+    }
 }

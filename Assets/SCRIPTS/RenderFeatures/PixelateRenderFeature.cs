@@ -9,8 +9,19 @@ public class PixelateRenderFeature : ScriptableRendererFeature
 
     public override void Create()
     {
+        pixelatePass?.Dispose();
+
         pixelatePass = new PixelatePass(pixelWidth, pixelHeight);
         pixelatePass.renderPassEvent = RenderPassEvent.AfterRenderingTransparents;
+    }
+
+    protected override void Dispose(bool disposing)
+    {
+        if (disposing)
+        {
+            pixelatePass?.Dispose();
+            pixelatePass = null;
+        }
     }
 
     public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
