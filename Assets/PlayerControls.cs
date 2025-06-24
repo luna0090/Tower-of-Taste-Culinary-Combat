@@ -272,6 +272,10 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         return asset.GetEnumerator();
     }
 
+        public object Sprint { get; internal set; }
+
+
+
     /// <inheritdoc cref="IEnumerable.GetEnumerator()" />
     IEnumerator IEnumerable.GetEnumerator()
     {
