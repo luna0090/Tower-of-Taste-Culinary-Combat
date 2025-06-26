@@ -1,18 +1,47 @@
 using UnityEngine.UI;
 using UnityEngine;
+using Unity.VisualScripting;
+using System.Runtime.InteropServices;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
     public GameObject spellButton;
     public GameObject dishButton;
     public GameObject healthBarMask;
-    public GameObject inventoryModal;
+    public GameObject mainModal;
+    public GameObject tabsHolder;
     public UIControls controls;
 
     private bool openInventoryPressed;
-    public void closeInventoryModal()
+    public void closeModal()
     {
-        inventoryModal.SetActive(false);
+        mainModal.SetActive(false);
+    }
+
+    public void showPage(GameObject which)
+    {
+        foreach (Transform page in mainModal.transform)
+        {
+            if (page.name.Contains("Page"))
+            {
+                page.gameObject.SetActive(false);
+            }
+        }
+
+        which.SetActive(true);
+    }
+
+    public void setActiveTab(GameObject which)
+    {
+        /*foreach (Transform tab in tabsHolder.transform)
+        {
+            tab.GetComponent<Image>().color = Color.white;
+            tab.GetComponentInChildren<TMP_Text>().color = Color.black;
+        }
+
+        which.GetComponent<Image>().color = Color.black;
+        which.GetComponentInChildren<TMP_Text>().color = Color.white;*/
     }
 
     public void setHealthBar(float health)
@@ -81,7 +110,20 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (openInventoryPressed) inventoryModal.SetActive(true);
+        if (openInventoryPressed)
+        {
+            foreach (Transform page in mainModal.transform)
+            {
+                if (page.name.Contains("Page1"))
+                {
+                    showPage(page.gameObject);
+                }
+            }
+
+            setActiveTab(tabsHolder.transform.GetChild(0).gameObject);
+
+            mainModal.SetActive(true);
+        }
         openInventoryPressed = false;
     }
 }
