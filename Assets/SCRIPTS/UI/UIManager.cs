@@ -1,7 +1,5 @@
 using UnityEngine.UI;
 using UnityEngine;
-using Unity.VisualScripting;
-using System.Runtime.InteropServices;
 using TMPro;
 
 public class UIManager : MonoBehaviour
@@ -12,6 +10,9 @@ public class UIManager : MonoBehaviour
     public GameObject mainModal;
     public GameObject tabsHolder;
     public UIControls controls;
+
+    public Sprite tabSelected;
+    public Sprite tabTex;
 
     private bool openInventoryPressed;
     public void closeModal()
@@ -34,14 +35,12 @@ public class UIManager : MonoBehaviour
 
     public void setActiveTab(GameObject which)
     {
-        /*foreach (Transform tab in tabsHolder.transform)
+        foreach (Transform tab in tabsHolder.transform)
         {
-            tab.GetComponent<Image>().color = Color.white;
-            tab.GetComponentInChildren<TMP_Text>().color = Color.black;
+            tab.GetComponent<Image>().sprite = tabTex;
         }
 
-        which.GetComponent<Image>().color = Color.black;
-        which.GetComponentInChildren<TMP_Text>().color = Color.white;*/
+        which.GetComponent<Image>().sprite = tabSelected;
     }
 
     public void setHealthBar(float health)
@@ -105,6 +104,8 @@ public class UIManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        setActiveTab(tabsHolder.transform.GetChild(0).gameObject);
+        showPage(mainModal.transform.GetChild(0).gameObject);
     }
 
     // Update is called once per frame
