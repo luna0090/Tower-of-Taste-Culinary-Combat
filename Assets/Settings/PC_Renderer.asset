@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PixelateRenderFeature
   m_EditorClassIdentifier: 
   m_Active: 1
-  pixelWidth: 320
-  pixelHeight: 180
+  pixelWidth: 480
+  pixelHeight: 270
 --- !u!114 &-3346735184157078455
 MonoBehaviour:
   m_ObjectHideFlags: 0
